@@ -6,7 +6,7 @@ import { Flame } from "lucide-react";
 
 const Navbar = () => {
     return (
-        <nav className="border-b">
+        <nav className="border-b sticky top-0 z-50 bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 text-white">
             <div className="container mx-auto flex flex-wrap justify-between items-center py-2">
                 <Link href="/">
                     <h1 className="text-2xl flex items-center relative">
