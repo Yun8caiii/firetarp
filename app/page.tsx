@@ -59,6 +59,7 @@ export default function Home() {
             ]}
             orderNowText="ORDER NOW"
             learnMoreText="LEARN MORE"
+            orderNowLink="https://buy.stripe.com/dR62aCfSL2fy4q4001"
           />
           <CardComponent
             title="Tarp Only"
@@ -69,6 +70,7 @@ export default function Home() {
             ]}
             orderNowText="ORDER NOW"
             learnMoreText="LEARN MORE"
+            orderNowLink="https://buy.stripe.com/aEUcPgcGzaM44q4fYY"
           />
         </div>
       </div>
