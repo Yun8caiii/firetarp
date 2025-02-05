@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react"
 import { cva } from "class-variance-authority"
  
 import { cn } from "@/lib/utils"
+import Image from "next/image"
  
 // Make sure this utility exists in your project for combining class names
  
@@ -83,7 +84,7 @@ export const BackgroundMedia: React.FC<BackgroundMediaProps> = ({
       )
     } else {
       return (
-        <img
+        <Image
           src={src}
           alt={alt}
           className="absolute inset-0 h-full w-full object-cover rounded-br-[88px]"

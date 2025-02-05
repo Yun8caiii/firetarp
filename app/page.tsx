@@ -39,7 +39,7 @@ export default function Home() {
               </HyperText>
             </h1>
             <HyperText className="text-zinc-950 text-xs md:text-sm mx-auto my-4 w-full max-w-xl text-center font-extrabold leading-relaxed tracking-wide px-8 md:px-4">
-              Defend your home with FiyaTarp's fire-resistant tarps, designed to
+              Defend your home with FiyaTarp&apos;s fire-resistant tarps, designed to
               block intense heat and embers, giving you peace of mind when it
               matters most!
             </HyperText>
