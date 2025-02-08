@@ -82,7 +82,7 @@ const About: React.FC = () => {
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
                   className="w-full h-56 object-cover"
