@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
@@ -13,6 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 export default function Home() {
   const words = ["stronger", "better", "together"];
@@ -20,7 +23,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center pt-20 md:pt-10">
         <div className="flex flex-row w-full h-full">
           <div className="flex-1 flex items-center justify-center bg-gray border-gray-300 p-4">
             <div className="text-center">
@@ -44,48 +47,80 @@ export default function Home() {
                   Next-Level Fire Protection
                 </HyperText>
               </h1>
-              <p className="text-stone-950 text-base dark:text-stone-500 md:text-lg mx-auto my-4 w-full max-w-xl text-center font-extralight leading-relaxed tracking-wide px-8 md:px-4 ">
+              <p className="text-stone-950 text-base dark:text-stone-500 md:text-lg mx-auto my-4 w-full max-w-xl text-center font-extralight leading-relaxed tracking-wide px-8 md:px-4">
                 Defend your home with FireTarp&apos;s fire-resistant tarps,
                 designed to block intense heat and embers, giving you peace of
                 mind when it matters most!
               </p>
               <div className="flex flex-row justify-center items-center space-x-4 my-8">
-                <Button>Get Protected Today</Button>
-                <Button variant="secondary">Learn More</Button>
+                <Link href="/services">
+                  <Button>Get Protected Today</Button>
+                </Link>
+                <Link href="#learnMore">
+                  <Button variant="secondary">Learn More</Button>
+                </Link>
               </div>
             </div>
           </div>
-          <div className="flex-1 relative border-8 rounded-lg border-gray-800 m-4 mb-[80px]">
+          <div className="flex-1 relative border-8 rounded-lg border-gray-800 m-4 mb-[80px] hidden md:block">
             <BackgroundMedia type="video" variant="dark" src="burnthomes.mp4" />
           </div>
         </div>
       </div>
 
       {/* How It Works Section */}
-      <div className="relative mx-auto w-full max-w-4xl pt-48 text-center flex flex-row">
-        <div className="flex-1 mr-72">
-          {" "}
-          {/* Added margin-right */}
-          <Carousel>
-            <CarouselContent>
-              <CarouselItem>Image1...</CarouselItem>
-              <CarouselItem>Image2...</CarouselItem>
-              <CarouselItem>Image3...</CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-        <div className="flex-1 flex flex-col items-center justify-center space-y-6">
+      <div
+        id="learnMore"
+        className="relative mx-auto w-full max-w-4xl pt-48 text-center flex flex-col md:flex-row"
+      >
+        {/* Text Section - appears first on mobile, second on desktop */}
+        <div className="flex-1 flex flex-col items-center justify-center space-y-6 order-1 md:order-2 mb-8 md:mb-0">
           <h2 className="text-xl md:text-3xl font-base md:leading-tight md:px-3">
             Short Process to Prevent Long Term Disasters.
           </h2>
           <p>
-            1. Scientifically Engineered Premium Heat Resistant Tarp Cover with Aerogel
-            Technologies to Protect Your Home.
+            1. Scientifically Engineered Premium Heat Resistant Tarp Cover with
+            Aerogel Technologies to Protect Your Home.
           </p>
           <p>2. Tightly wrapped around your home</p>
-          <p>3. Protect all your valubles and goods from being destroyed saving you the cost to rebuilding from scatch</p>
+          <p>
+            3. Protect all your valuables and goods from being destroyed, saving
+            you the cost to rebuild from scratch.
+          </p>
+        </div>
+
+        {/* Carousel Section - appears second on mobile, first on desktop */}
+        <div className="flex-1 order-2 md:order-1 md:mr-72">
+          <Carousel>
+            <CarouselContent>
+              <CarouselItem>
+                <Image
+                  src="/aerogel.jpg"
+                  alt="Aerogel Image"
+                  width={600}
+                  height={400}
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  src="/homewrap.jpg"
+                  alt="Home Wrap Image"
+                  width={600}
+                  height={400}
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  src="/protectedHome.jpg"
+                  alt="Protected Home Image"
+                  width={600}
+                  height={400}
+                />
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
 

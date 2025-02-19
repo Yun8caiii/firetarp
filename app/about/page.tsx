@@ -5,6 +5,7 @@ interface TeamMember {
   name: string;
   title: string;
   image: string;
+  alt: string;
   description: string;
 }
 
@@ -17,23 +18,26 @@ const teamMembers: TeamMember[] = [
   {
     name: "Brian F.",
     title: "Chief Executive Officer",
-    image: "https://via.placeholder.com/300x300?text=John+Doe",
+    image: "https://placehold.co/600x400",
+    alt: "Brian F",
     description:
-      "John leads our company with vision, strategy, and an unwavering commitment to excellence.",
+      "Brian leads our company with vision, strategy, and an unwavering commitment to excellence.",
   },
   {
     name: "Kyle T.",
     title: "Chief Executive Officer",
-    image: "https://via.placeholder.com/300x300?text=Jane+Smith",
+    image: "https://placehold.co/600x400",
+    alt: "Kyle T.",
     description:
-      "Jane drives our technological innovations and ensures that our systems run smoothly.",
+      "Kyle drives our technological innovations and ensures that our systems run smoothly.",
   },
   {
     name: "Yun C.",
     title: "Chief Executive Officer",
-    image: "https://via.placeholder.com/300x300?text=Emily+Johnson",
+    image: "https://placehold.co/600x400",
+    alt: "Yun C",
     description:
-      "Emily coordinates our operations, making sure every detail aligns with our mission.",
+      "Yun coordinates our operations, making sure every detail aligns with our mission.",
   },
 ];
 
